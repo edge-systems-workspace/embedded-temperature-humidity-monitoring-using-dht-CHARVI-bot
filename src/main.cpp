@@ -9,3 +9,7 @@
  * and displays temperature and humidity values on Serial Monitor.
  */
 #include <Arduino.h>
+#include <DHT.h>
+#define DHTPIN 2      //DHT11 connected to 2
+#define DHTTYPE DHT11 //Sensor Type
+
