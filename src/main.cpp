@@ -12,4 +12,11 @@
 #include <DHT.h>
 #define DHTPIN 2      //DHT11 connected to 2
 #define DHTTYPE DHT11 //Sensor Type
+DHT dht(DHTPIN, DHTTYPE);
+void setup() {
+    Serial.begin(9600);
+    dht.begin();
+    Serial.println("DHT11 Sensor Initialized");
+}
+
 
