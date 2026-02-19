@@ -18,5 +18,14 @@ void setup() {
     dht.begin();
     Serial.println("DHT11 Sensor Initialized");
 }
+void loop() {
+    float humidity = dht.readHumidity();
+    float temperature = dht.readTemperature();   //Celsius
+    if (isnan(humidity)|| isnan(temperature))
+    {
+        Serial.println("Failed to read from DHT sensor!");
+        delay(2000);
+        return;
+    }
 
 
